@@ -1,0 +1,236 @@
+/* Variáveis de cores e fontes */
+:root {
+    --primary-color: #16071f; /* Cor roxa do Instagram */
+    --secondary-color: #fd1d1d; /* Cor vermelha do Instagram */
+    --background-color: #fafafa; /* Fundo claro */
+    --text-color: #262626; /* Cor do texto (cinza escuro do Instagram) */
+    --link-color: #0095f6; /* Cor dos links (azul do Instagram) */
+    --font-family: Ubuntu, Helvetica, Arial, sans-serif; /* Fonte do Instagram */
+}
+
+/* Reset básico para remover estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização global do body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Container principal para o conteúdo */
+.container {
+    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+    padding: 20px;
+}
+
+/* Cabeçalho (Header) */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #a56cc1; /* Cor mais clara do roxo */
+}
+
+/* Posts */
+.post {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.post h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.post p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.post a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.post a:hover {
+    color: #0077cc; /* Azul mais escuro */
+}
+
+main,
+article.content {
+    margin: 30px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+/* Botões */
+button,
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #6a2d8f; /* Roxo mais escuro */
+}
+
+button.secondary,
+.btn.secondary {
+    background-color: var(--secondary-color);
+}
+
+button.secondary:hover,
+.btn.secondary:hover {
+    background-color: #e61a1a; /* Vermelho mais escuro */
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0077cc; /* Azul mais escuro */
+}
+
+/* Formulários */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Cola o footer no fundo */
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #a56cc1; /* Cor mais clara do roxo */
+}
+
+footer .social-links a svg {
+    width: 24px;
+    height: 24px;
+}
+
+footer .copyright {
+    font-size: 0.9rem;
+}
+
+@font-face {
+    font-family: "GodOfWar"; /* Dê um nome para a fonte */
+    src: url("../fonts/god-of-war.TTF") format("truetype"); /* Caminho para o arquivo .ttf */
+    font-weight: normal; /* Peso da fonte (opcional) */
+    font-style: normal; /* Estilo da fonte (opcional) */
+}
+
+.godOfWarFont, article h1 {
+    font-family: "GodOfWar";
+}

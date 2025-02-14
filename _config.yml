@@ -1,7 +1,8 @@
 # Configurações básicas do site
-title: Gustavo Ennes Blog
-description: Um blog minimalista sobre desenvolvimento de código
+title: Kratos Sistemas Blog
+description: The god of var
 url: "https://gustavo-ennes.github.io" # URL base do site
+baseUrl: ""
 
 # Configurações de autor
 author:
@@ -37,14 +38,8 @@ navigation:
   - title: Posts
     url: /posts/
 
-# Configurações de Sass
-sass:
-  style: compressed # Minifica o CSS final
-
 # Configurações de exclusão (arquivos ignorados no build)
 exclude:
-  - Gemfile
-  - Gemfile.lock
   - README.md
   - LICENSE
 
@@ -62,7 +57,7 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: page
+      layout: default
 
 # Variáveis personalizadas (opcionais)
 social_links:
