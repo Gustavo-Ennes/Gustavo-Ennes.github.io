@@ -1,0 +1,204 @@
+// Variáveis de cores e fontes
+$primary-color: #833AB4; // Cor roxa do Instagram
+$secondary-color: #FD1D1D; // Cor vermelha do Instagram
+$background-color: #fafafa; // Fundo claro
+$text-color: #333; // Cor do texto
+$link-color: #00376b; // Cor dos links
+$font-family: 'Helvetica Neue', sans-serif;
+
+// Reset básico para remover estilos padrão
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Estilização global do body
+body {
+  margin: 0;
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+// Cabeçalho (Header)
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+
+      li {
+        display: inline;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: lighten($primary-color, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Posts
+.post {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: darken($link-color, 10%);
+    }
+  }
+}
+
+// Botões
+button,
+.btn {
+  display: inline-block;
+  background-color: $primary-color;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &.secondary {
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($link-color, 10%);
+  }
+}
+
+// Formulários
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+}
+
+// Rodapé (Footer)
+footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+
+    a {
+      color: white;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: lighten($primary-color, 20%);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+  }
+}
