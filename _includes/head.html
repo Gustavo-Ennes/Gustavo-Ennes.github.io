@@ -1,0 +1,34 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Título da Página -->
+    <title>
+        {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    </title>
+
+    <!-- Descrição da Página -->
+    <meta
+        name="description"
+        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    />
+
+    <!-- Ícone do Site (Favicon) -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="{{ '/assets/images/favicon.png' | relative_url }}"
+    />
+
+    <!-- Links para Estilos CSS -->
+    <link rel="stylesheet" href="{{ '/assets/main.scss' | relative_url }}" />
+
+    <!-- Fontes do Google (opcional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
+</head>
