@@ -1,0 +1,70 @@
+# Configurações básicas do site
+title: Gustavo Ennes Blog
+description: Um blog minimalista sobre desenvolvimento de código
+url: "https://gustavo-ennes.github.io" # URL base do site
+
+# Configurações de autor
+author:
+  name: Gustavo Ennes
+  email: blog@ennes.dev
+  github: Gustavo-Ennes
+
+# Configurações de idioma e localização
+lang: pt-br
+timezone: America/Sao_Paulo
+
+# Configurações de build
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Plugins (compatíveis com GitHub Pages)
+plugins:
+  - jekyll-feed # Gera um feed RSS para o blog
+  - jekyll-seo-tag # Melhora a otimização SEO
+  - jekyll-sitemap # Gera um sitemap.xml
+
+# Configurações de SEO
+github_username: Gustavo-Ennes
+logo: /assets/images/logo.png
+
+# Configurações de navegação
+navigation:
+  - title: Home
+    url: /
+  - title: Sobre
+    url: /about/
+  - title: Posts
+    url: /posts/
+
+# Configurações de Sass
+sass:
+  style: compressed # Minifica o CSS final
+
+# Configurações de exclusão (arquivos ignorados no build)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# Configurações adicionais
+defaults:
+  -
+    scope:
+      path: "" # Aplica a todos os arquivos
+      type: posts
+    values:
+      layout: post
+      comments: true
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Variáveis personalizadas (opcionais)
+social_links:
+  github: https://github.com/gustavo-ennes
+  linkedin: https://linkedin.com/in/gustavo-ennes
